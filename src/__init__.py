@@ -4,7 +4,7 @@ from .db.session import create_db
 from src.users.models import User 
 from src.expenses.models import Expense 
 from src.expenses.routes import router
-
+from src.users.routes import auth_router 
 
 
 @asynccontextmanager
@@ -26,4 +26,4 @@ async def root():
 
 #routers
 app.include_router(router=router)
-
+app.include_router(router=auth_router)

@@ -9,11 +9,6 @@ router = APIRouter(prefix="/expenses", tags=["expenses"])
 
 
 
-# TEMPORARY stand-in until login/auth is wired up
-def get_current_user_id() -> int:
-    return 1
-
-
 @router.post("", response_model=ExpenseRead, status_code=status.HTTP_201_CREATED)
 async def add_expense(
     expense_data: ExpenseCreate,
