@@ -4,7 +4,7 @@ from datetime import date, datetime,timezone
 from decimal import Decimal
 from ..db.base import Base
 
-from sqlalchemy import Date, DateTime, ForeignKey, Numeric, String, Text
+from sqlalchemy import Date, DateTime, ForeignKey, Numeric, String, Text, func 
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 if TYPE_CHECKING:
@@ -29,8 +29,6 @@ class Expense(Base):
         Text,
         nullable=True
     )
-
-    date: Mapped[datetime] = mapped_column(Date)
 
     user_id: Mapped[int] = mapped_column(
         ForeignKey("users.id")
