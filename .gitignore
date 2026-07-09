@@ -1,2 +1,51 @@
-.venv
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables and Secrets (CRITICAL)
 .env
+.env.*
+!.env.example
+secret_key/
+certs/
+
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+pyenv/
+
+# Package Managers & Build Artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+.pdm-home/
+.pdm-python
+__pypackages__/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.nox/
+.tox/
+
+# Database Files (SQLite, etc.)
+*.db
+*.sqlite3
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Operating System Files
+.DS_Store
+Thumbs.db
