@@ -1,9 +1,9 @@
 from fastapi import HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from users.schema import UserCreate, UserLogin
-from users.models import User
-from users.security import hash_password,verify_password
+from src.users.schema import UserCreate, UserLogin
+from src.users.models import User
+from src.users.security import hash_password,verify_password
 
 async def register_user(user_data: UserCreate, session: AsyncSession) -> User:
     stmt = select(User).where(User.email==user_data.email)
