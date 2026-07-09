@@ -19,5 +19,10 @@ class ExpenseRead(BaseModel):
     model_config = {"from_attributes": True}
 
 class ExpenseUpdate(BaseModel):
-    pass
+    title: str | None = None
+    amount: float | None = None
+    category: str | None = None
+    description: str | None = None
+    
+
 
