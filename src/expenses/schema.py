@@ -12,7 +12,7 @@ class ExpenseRead(BaseModel):
     title: str
     amount: float
     category: str |  None
-    decription: str | None 
+    description: str | None 
     created_at: datetime
     user_id: int
 
@@ -23,6 +23,6 @@ class ExpenseUpdate(BaseModel):
     amount: float | None = None
     category: str | None = None
     description: str | None = None
-    
+
 
 

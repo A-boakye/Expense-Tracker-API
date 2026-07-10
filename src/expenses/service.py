@@ -16,7 +16,6 @@ async def create_expense(
         amount=expense_data.amount,
         category=expense_data.category,
         description=expense_data.description,
-        date=expense_data.date,
         user_id=USER_ID,
     )
 
@@ -60,7 +59,6 @@ async def update_expense(
     expense.amount = expense_data.amount
     expense.category = expense_data.category
     expense.description = expense_data.description
-    expense.date = expense_data.date
 
     await db.commit()
     await db.refresh(expense)
